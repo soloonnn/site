@@ -1,0 +1,42 @@
+[
+    {
+        "artist": "Mac Miller",
+        "title": "Circles",
+        "image": "img/albums/circles.jpg",
+        "reviews": [
+            "Un album introspectif et émouvant qui reflète l'évolution artistique de Mac Miller.",
+            "Des sonorités apaisantes et des textes profonds."
+        ],
+        "context": "Sorti après la mort de Mac Miller, cet album offre une réflexion poignante sur la vie et l'art."
+    },
+    {
+        "artist": "Aurora",
+        "title": "What Happened to the Heart?",
+        "image": "img/albums/whtth.jpg",
+        "reviews": [
+            "Une œuvre poignante qui explore des thèmes d'amour et de perte.",
+            "La voix éthérée d'Aurora transporte les auditeurs dans un autre monde."
+        ],
+        "context": "Cet album marque une nouvelle direction artistique pour Aurora, mêlant émotions brutes et production soignée."
+    },
+    {
+        "artist": "Yot Club",
+        "title": "Santolina",
+        "image": "img/albums/santolina.jpg",
+        "reviews": [
+            "Un album indie-pop rafraîchissant, parfait pour les soirées détendues.",
+            "Des mélodies captivantes et un style lo-fi unique."
+        ],
+        "context": "Inspiré par les paysages côtiers et les moments de solitude, cet album capture l'essence de l'été."
+    },
+    {
+        "artist": "Orelsan",
+        "title": "Civilisation",
+        "image": "img/albums/civilisation.jpg",
+        "reviews": [
+            "Un album riche en storytelling qui reflète les défis de notre époque.",
+            "Des morceaux introspectifs et des productions modernes."
+        ],
+        "context": "Cet album explore des thèmes tels que la société, l'identité et le changement, tout en gardant l'humour et l'authenticité d'Orelsan."
+    }
+]
