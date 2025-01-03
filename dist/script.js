@@ -8,16 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// Charger et afficher les albums
 function loadAlbums() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            // Charger les données JSON
-            const response = yield fetch('albums.json'); // Remplacez par le chemin réel
+            const response = yield fetch('albums.json');
             const albums = yield response.json();
-            // Sélectionner la section albums dans le DOM
             const albumGrid = document.querySelector('.album-grid');
-            // Générer dynamiquement le contenu des albums
             albums.forEach(album => {
                 const albumElement = document.createElement('div');
                 albumElement.className = 'album-case';
@@ -34,7 +30,6 @@ function loadAlbums() {
         }
     });
 }
-// Charger et afficher les critiques
 function loadReviews(albums) {
     const critiquesSection = document.querySelector('#critiques');
     albums.forEach(album => {
@@ -48,7 +43,6 @@ function loadReviews(albums) {
         critiquesSection.appendChild(reviewBlock);
     });
 }
-// Charger et afficher les contextes
 function loadContexts(albums) {
     const contextSection = document.querySelector('#context');
     albums.forEach(album => {
@@ -60,7 +54,6 @@ function loadContexts(albums) {
         contextSection.appendChild(contextBlock);
     });
 }
-// Fonction principale
 function init() {
     return __awaiter(this, void 0, void 0, function* () {
         const response = yield fetch('albums.json');
@@ -70,5 +63,4 @@ function init() {
         loadContexts(albums);
     });
 }
-// Appeler la fonction au chargement de la page
 document.addEventListener('DOMContentLoaded', init);
