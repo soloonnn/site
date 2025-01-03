@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,9 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AlbumController = exports.AlbumView = exports.Album = void 0;
-class Album {
+export class Album {
     constructor(artist, title, image, reviews, context) {
         this.artist = artist;
         this.title = title;
@@ -19,8 +16,7 @@ class Album {
         this.context = context;
     }
 }
-exports.Album = Album;
-class AlbumView {
+export class AlbumView {
     static displayAlbums(albums) {
         const albumGrid = document.querySelector('.album-grid');
         if (!albumGrid) {
@@ -70,8 +66,7 @@ class AlbumView {
         });
     }
 }
-exports.AlbumView = AlbumView;
-class AlbumController {
+export class AlbumController {
     static loadAlbums() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -88,7 +83,6 @@ class AlbumController {
         });
     }
 }
-exports.AlbumController = AlbumController;
 if (typeof document !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
         AlbumController.loadAlbums();
