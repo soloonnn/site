@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// === MODEL ===
-// Définir une classe pour représenter les albums
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlbumController = exports.AlbumView = exports.Album = void 0;
 class Album {
     constructor(artist, title, image, reviews, context) {
         this.artist = artist;
@@ -19,17 +19,15 @@ class Album {
         this.context = context;
     }
 }
-// === VIEW ===
-// Gérer l'affichage des albums, critiques et contexte
+exports.Album = Album;
 class AlbumView {
-    // Gérer l'affichage des albums
     static displayAlbums(albums) {
         const albumGrid = document.querySelector('.album-grid');
         if (!albumGrid) {
             console.error("L'élément album-grid est introuvable dans le DOM.");
             return;
         }
-        albumGrid.innerHTML = ''; // Réinitialiser le contenu
+        albumGrid.innerHTML = '';
         albums.forEach((album) => {
             const albumElement = document.createElement('div');
             albumElement.className = 'album-case';
@@ -41,12 +39,11 @@ class AlbumView {
             albumGrid.appendChild(albumElement);
         });
     }
-    // Gérer l'affichage des critiques
     static displayReviews(albums) {
         const critiquesSection = document.querySelector('#critiques');
         if (!critiquesSection)
             return;
-        critiquesSection.innerHTML = ''; // Réinitialiser le contenu
+        critiquesSection.innerHTML = '';
         albums.forEach((album) => {
             const reviewBlock = document.createElement('div');
             reviewBlock.innerHTML = `
@@ -58,12 +55,11 @@ class AlbumView {
             critiquesSection.appendChild(reviewBlock);
         });
     }
-    // Gérer l'affichage des contextes
     static displayContexts(albums) {
         const contextSection = document.querySelector('#context');
         if (!contextSection)
             return;
-        contextSection.innerHTML = ''; // Réinitialiser le contenu
+        contextSection.innerHTML = '';
         albums.forEach((album) => {
             const contextBlock = document.createElement('div');
             contextBlock.innerHTML = `
@@ -74,8 +70,7 @@ class AlbumView {
         });
     }
 }
-// === CONTROLLER ===
-// Gérer l'interaction entre le modèle et la vue
+exports.AlbumView = AlbumView;
 class AlbumController {
     static loadAlbums() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -93,8 +88,9 @@ class AlbumController {
         });
     }
 }
-// === INITIALISATION ===
-// Charger les données et initialiser l'affichage
-document.addEventListener('DOMContentLoaded', () => {
-    AlbumController.loadAlbums();
-});
+exports.AlbumController = AlbumController;
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+        AlbumController.loadAlbums();
+    });
+}

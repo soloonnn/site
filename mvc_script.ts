@@ -1,4 +1,4 @@
-class Album {
+export class Album {
     artist: string;
     title: string;
     image: string;
@@ -14,7 +14,7 @@ class Album {
     }
 }
 
-class AlbumView {
+export class AlbumView {
     static displayAlbums(albums: Album[]): void {
         const albumGrid = document.querySelector('.album-grid');
         if (!albumGrid) {
@@ -68,7 +68,7 @@ class AlbumView {
     }
 }
 
-class AlbumController {
+export class AlbumController {
     static async loadAlbums(): Promise<void> {
         try {
             const response = await fetch('albums.json');
@@ -87,6 +87,8 @@ class AlbumController {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    AlbumController.loadAlbums();
-});
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+        AlbumController.loadAlbums();
+    });
+}
