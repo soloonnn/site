@@ -1,4 +1,7 @@
-/* Style de base : mobile first */
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -110,7 +113,6 @@ footer {
     bottom: 0;
 }
 
-/* Responsive Design : ordinateur */
 @media (min-width: 1024px) {
     .nav-bar {
         justify-content: center;
